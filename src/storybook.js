@@ -3,7 +3,7 @@ import * as StorybookConfig from './config.js';
 import * as common from './common.js';
 import start from './start.js';
 
-export const storybook = command('storybook', {
+export const storybook = command('storybook-debug-ci', {
   description: 'Snapshot static or hosted Storybook stories',
   commands: [start],
 
