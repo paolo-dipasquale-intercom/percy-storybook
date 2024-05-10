@@ -1,5 +1,5 @@
 {
-  "name": "@percy/storybook-ci-debug",
+  "name": "@paolo-dipasquale-intercom/storybook-ci-debug",
   "version": "6.0.0-beta.0",
   "description": "Storybook addons for visual testing with Percy",
   "keywords": [
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/percy/percy-storybook.git"
+    "url": "https://github.com/paolo-dipasquale-intercom/percy-storybook.git"
   },
   "publishConfig": {
     "access": "public",
