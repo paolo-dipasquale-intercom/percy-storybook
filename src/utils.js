@@ -238,8 +238,9 @@ export function evalStorybookStorySnapshots({ waitFor }) {
 
     await window.__STORYBOOK_STORY_STORE__?.extract?.();
     return window.__STORYBOOK_STORY_STORE__.raw();
-  }, 5000).catch(() => Promise.reject(new Error(
-    'Storybook object not found on the window. ' +
+  }, 5000).catch((e) => Promise.reject(new Error(
+    e + 
+    '\n Storybook object not found on the window. ' +
       'Open Storybook and check the console for errors.'
   ))).then(stories => {
     let invalid = new Map();
@@ -264,8 +265,9 @@ export function evalSetCurrentStory({ waitFor }, story) {
     // get the correct channel depending on the storybook version
     return window.__STORYBOOK_PREVIEW__?.channel ||
         window.__STORYBOOK_STORY_STORE__?._channel;
-  }, 5000).catch(() => Promise.reject(new Error(
-    'Storybook object not found on the window. ' +
+  }, 5000).catch((e) => Promise.reject(new Error(
+    e + 
+    '\n Storybook object not found on the window. ' +
       'Open Storybook and check the console for errors.'
   ))).then(channel => {
     let { id, queryParams, globals, args } = story;
